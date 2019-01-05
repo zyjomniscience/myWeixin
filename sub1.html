@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/main.css"/>
+	</head>
+
+	<body>
+		<div class="mui-content" >
+	    	<ul class="mui-table-view">
+	    	    <li class="mui-table-view-cell mui-media">
+	    	        <a href="javascript:;" title="幸福">
+	    	            <img class="mui-media-object mui-pull-right" src="http://placehold.it/40x30">
+	    	            <div class="mui-media-body">
+	    	                幸福
+	    	                <p class="mui-ellipsis">能和心爱的人一起睡觉，是件幸福的事情；可是，打呼噜怎么办？</p>
+	    	            </div>
+	    	        </a>
+	    	    </li>
+	    	    <li class="mui-table-view-cell mui-media">
+	    	        <a href="javascript:;" title="木屋">
+	    	            <img class="mui-media-object mui-pull-right" src="http://placehold.it/40x30">
+	    	            <div class="mui-media-body">
+	    	                木屋
+	    	                <p class="mui-ellipsis">想要这样一间小木屋，夏天挫冰吃瓜，冬天围炉取暖.</p>
+	    	            </div>
+	    	        </a>
+	    	    </li>
+	    	    <li class="mui-table-view-cell mui-media">
+	    	        <a href="javascript:;" title="CBD">
+	    	            <img class="mui-media-object mui-pull-right" src="http://placehold.it/40x30">
+	    	            <div class="mui-media-body">
+	    	                CBD
+	    	                <p class="mui-ellipsis">烤炉模式的城，到黄昏，如同打翻的调色盘一般.</p>
+	    	            </div>
+	    	        </a>
+	    	    </li>
+	    	</ul>
+	</div>
+	
+	
+	
+	</body>
+
+</html>
+<script src="js/mui.min.js"></script>
+<script type="text/javascript">
+	mui.init();
+	mui(".mui-table-view-cell").on("tap","a",function(){
+		var title=this.getAttribute("title");
+		mui.openWindow({
+			url:"sub1_Chat.html",
+			id:"sub1_Chat.html",
+			style:{},
+			extras:{
+				title:title,
+				
+			},
+			show:{
+				autoShow:true,
+				aniShow:"slide-in-right",
+				duration:100
+			},
+			waiting:{
+				autoShow:true,
+				title:"正在加載...",
+				options:{
+//					width:
+//					height:
+				}
+			}
+		})
+	})
+	
+</script>
