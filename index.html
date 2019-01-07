@@ -52,5 +52,8 @@ mui.plusReady(function(){
 	}
 	plus.webview.show(subSpages[0]);
 });
-
+	mui(".mui-bar-tab").on("tap","a",function(e){
+		var tagPage=this.getAttribute("href");
+		plus.webview.show(tagPage,"fade-in",100);
+	})
 </script>
